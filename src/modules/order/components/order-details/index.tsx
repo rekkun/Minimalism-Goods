@@ -12,7 +12,6 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
 
     return formatted.slice(0, 1).toUpperCase() + formatted.slice(1)
   }
-
   return (
     <div>
       <Text>
@@ -28,7 +27,7 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
       <Text className="mt-2">
         Ngày đặt hàng:{" "}
         <span data-testid="order-date">
-          {new Date(order.created_at).toDateString()}
+          {new Date(order.created_at).toLocaleDateString("en-UK")}
         </span>
       </Text>
       <Text className="mt-2 text-ui-fg-interactive">

@@ -45,7 +45,7 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
                     : `${convertToLocale({
                         amount: payment.amount,
                         currency_code: order.currency_code,
-                      })} paid at ${new Date(
+                      })} được thanh toán lúc ${new Date(
                         payment.created_at ?? ""
                       ).toLocaleString()}`}
                 </Text>
